@@ -12,11 +12,11 @@
 
 Variables can be added depending on application and accordingly the paramenters can be added. <br />
 
-```payload = {
+ ``` payload = {
             variable_1 : value_1,
             variable_2 : value_2
-    }```
-
+            }
+```
 Above is json format of payload. You can add the multiple variables and values in it and push to the platform. <br />
 
 
