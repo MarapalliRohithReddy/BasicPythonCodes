@@ -1,7 +1,9 @@
 # cloudPlatformConnect
 
 ## Function to Connect python to Ubidots Cloud Platform
-### **postRequestUbidots(devLabel,token,variable_1,variable_2,value_1,value_2)**
+```
+postRequestUbidots(devLabel,token,variable_1,variable_2,value_1,value_2)
+```
 
 **_parameter1:_**  Device label from Ubidots Platform <br />
 **_parameter2:_**  TOKEN given by Ubidots Platform  <br />
@@ -12,7 +14,8 @@
 
 Variables can be added depending on application and accordingly the paramenters can be added. <br />
 
- ``` payload = {
+ ```
+payload = {
             variable_1 : value_1,
             variable_2 : value_2
             }
@@ -20,9 +23,14 @@ Variables can be added depending on application and accordingly the paramenters 
 Above is json format of payload. You can add the multiple variables and values in it and push to the platform. <br />
 
 
+```
+url = "http://industrial.api.ubidots.com"
+    url = "{}/api/v1.6/devices/{}".format(url, devLabel)
+    headers = {"X-Auth-Token": token, "Content-Type": "application/json"}
+    payload = {
+            variable_1 : value_1,
+            variable_2 : value_2,
+    }
+```
 
-
-
-
-
-
+Above is a post request parts where we have _**url**_ , _**headers**_ and _**Payload**_
